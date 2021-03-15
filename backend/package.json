@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for the eshop ObuvkiStili.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desi109/obuvkistili.git"
+  },
+  "author": "Desislava Milusheva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/desi109/obuvkistili/issues"
+  },
+  "homepage": "https://github.com/desi109/obuvkistili#readme"
+}
