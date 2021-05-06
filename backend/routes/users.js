@@ -28,6 +28,26 @@ router.get('/:id', async(req,res)=>{
     res.status(200).send(user);
 })
 
+router.post('/', async (req,res)=>{
+    let user = new User({
+        name: req.body.name,
+        email: req.body.email,
+        passwordHash: bcrypt.hashSync(req.body.passwordHash, 10),
+        phone: req.body.phone,
+        isAdmin: req.body.isAdmin,
+        street: req.body.street,
+        apartment: req.body.apartment,
+        zip: req.body.zip,
+        city: req.body.city,
+        country: req.body.country,
+    })
+    user = await user.save();
+
+    if(!user)
+    return res.status(400).send('The user cannot be created!')
+
+    res.send(user);
+})
 
 // POST (registration) of a new user 
 // http://localhost:3000/api/v1/users/registration
@@ -35,7 +55,7 @@ router.post('/registration', async (req,res)=>{
     let user = new User({
         name: req.body.name,
         email: req.body.email,
-        passwordHash: bcrypt.hashSync(req.body.password, 10),
+        passwordHash: bcrypt.hashSync(req.body.passwordHash, 10),
         phone: req.body.phone,
         isAdmin: req.body.isAdmin,
         street: req.body.street,
@@ -59,10 +79,10 @@ router.post('/login', async (req,res) => {
     const user = await User.findOne({email: req.body.email})
     const secret = process.env.secret;
     if(!user) {
-        return res.status(400).send('The user not found');
+        return res.status(400).send('The user does not exists.');
     }
 
-    if(user && bcrypt.compareSync(req.body.password, user.passwordHash)) {
+    if(user && bcrypt.compareSync(req.body.passwordHash, user.passwordHash)) {
         const token = jwt.sign(
             {
                 userId: user.id,
@@ -75,9 +95,7 @@ router.post('/login', async (req,res) => {
         res.status(200).send({user: user.email , token: token}) 
     } else {
        res.status(400).send('Password is wrong!');
-    } 
- 
-    
+    }
 })
 
 
@@ -86,11 +104,11 @@ router.post('/login', async (req,res) => {
 router.put('/:id',async (req, res)=> {
 
     const userExist = await User.findById(req.params.id);
-    let newPassword
-    if(req.body.password) {
-        newPassword = bcrypt.hashSync(req.body.password, 10)
+    let newPasswordHash
+    if(req.body.passwordHash) {
+        newPasswordHash = bcrypt.hashSync(req.body.passwordHash, 10)
     } else {
-        newPassword = userExist.passwordHash;
+        newPasswordHash = userExist.passwordHash;
     }
 
     const user = await User.findByIdAndUpdate(
@@ -98,7 +116,7 @@ router.put('/:id',async (req, res)=> {
         {
             name: req.body.name,
             email: req.body.email,
-            passwordHash: newPassword,
+            passwordHash: newPasswordHash,
             phone: req.body.phone,
             isAdmin: req.body.isAdmin,
             street: req.body.street,
@@ -124,7 +142,7 @@ router.delete('/:id', (req, res)=>{
         if(user) {
             return res.status(200).json({success: true, message: 'The user is deleted!'})
         } else {
-            return res.status(404).json({success: false , message: 'User not found!'})
+            return res.status(404).json({success: false , message: 'The user was not found!'})
         }
     }).catch(err=>{
        return res.status(500).json({success: false, error: err}) 
