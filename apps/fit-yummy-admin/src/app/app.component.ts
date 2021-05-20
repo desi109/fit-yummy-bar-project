@@ -2,8 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: "fit-yummy-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"],
+  templateUrl: "./app.component.html"
 })
 export class AppComponent {
   title = "fit-yummy-admin";
