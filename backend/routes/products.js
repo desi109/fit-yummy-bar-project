@@ -81,12 +81,8 @@ router.post(`/`, uploadOptions.single('image'), async (req, res) => {
         description: req.body.description,
         richDescription: req.body.richDescription,
         image: `${basePath}${fileName}`,  // http://localhost:3000/public/upload/image-2323232
-        brand: req.body.brand,
         price: req.body.price,
         category: req.body.category,
-        countInStock: req.body.countInStock,
-        rating: req.body.rating,
-        numReviews: req.body.numReviews,
         isFeatured: req.body.isFeatured
     });
 
@@ -129,12 +125,8 @@ router.put('/:id', uploadOptions.single('image'), async (req, res) => {
             description: req.body.description,
             richDescription: req.body.richDescription,
             image: imagepath,
-            brand: req.body.brand,
             price: req.body.price,
             category: req.body.category,
-            countInStock: req.body.countInStock,
-            rating: req.body.rating,
-            numReviews: req.body.numReviews,
             isFeatured: req.body.isFeatured
         },
         { new: true }

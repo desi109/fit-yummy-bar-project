@@ -6,22 +6,7 @@ const orderSchema = mongoose.Schema({
         ref: 'OrderItem',
         required:true
     }],
-    shippingAddress1: {
-        type: String,
-        required: true,
-    },
-    shippingAddress2: {
-        type: String,
-    },
-    city: {
-        type: String,
-        required: true,
-    },
-    zip: {
-        type: String,
-        required: true,
-    },
-    country: {
+    shippingAddress: {
         type: String,
         required: true,
     },
@@ -72,11 +57,7 @@ Order Example:
             "product" : "6055a6a8eafaa314670475ss"
         }
     ],
-    "shippingAddress1" : "ul. Vitinq 23",
-    "shippingAddress2" : "apt. 11",
-    "city": "Plovdiv",
-    "zip": "4000",
-    "country": "Bulgaria",
+    "shippingAddress" : "Plovdiv, ul. Vitinq 23",
     "phone": "0895864306",
     "user": "5fd51bc7e39ba856244a3b44"
 }

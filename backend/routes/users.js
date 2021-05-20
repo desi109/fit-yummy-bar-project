@@ -35,11 +35,7 @@ router.post('/', async (req,res)=>{
         passwordHash: bcrypt.hashSync(req.body.passwordHash, 10),
         phone: req.body.phone,
         isAdmin: req.body.isAdmin,
-        street: req.body.street,
-        apartment: req.body.apartment,
-        zip: req.body.zip,
-        city: req.body.city,
-        country: req.body.country,
+        shippingAddress: req.body.shippingAddress,
     });
     user = await user.save();
 
@@ -58,11 +54,7 @@ router.post('/registration', async (req,res)=>{
         passwordHash: bcrypt.hashSync(req.body.passwordHash, 10),
         phone: req.body.phone,
         isAdmin: req.body.isAdmin,
-        street: req.body.street,
-        apartment: req.body.apartment,
-        zip: req.body.zip,
-        city: req.body.city,
-        country: req.body.country,
+        shippingAddress: req.body.shippingAddress
     });
     user = await user.save();
 
@@ -119,11 +111,7 @@ router.put('/:id',async (req, res)=> {
             passwordHash: newPasswordHash,
             phone: req.body.phone,
             isAdmin: req.body.isAdmin,
-            street: req.body.street,
-            apartment: req.body.apartment,
-            zip: req.body.zip,
-            city: req.body.city,
-            country: req.body.country,
+            shippingAddress: req.body.shippingAddress
         },
         { new: true}
     );

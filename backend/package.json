@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Backend for the eshop ObuvkiStili.",
+  "description": "Backend for Fit-yummy Bar.",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/desi109/obuvkistili.git"
+    "url": "git+https://github.com/desi109/fit-yummy-bar.git"
   },
   "author": "Desislava Milusheva",
   "license": "ISC",
@@ -27,7 +27,7 @@
     "nodemon": "^2.0.7"
   },
   "bugs": {
-    "url": "https://github.com/desi109/obuvkistili/issues"
+    "url": "https://github.com/desi109/fit-yummy-bar/issues"
   },
-  "homepage": "https://github.com/desi109/obuvkistili#readme"
+  "homepage": "https://github.com/desi109/fit-yummy-bar#readme"
 }

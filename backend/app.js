@@ -36,7 +36,7 @@ app.use(`${api}/orders`, ordersRoutes);
 mongoose.connect(process.env.CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    dbName: 'obuvkistili'
+    dbName: 'fit-yummy-bar'
 })
 .then(()=>{
     console.log('Database Connection is ready...')
@@ -46,7 +46,7 @@ mongoose.connect(process.env.CONNECTION_STRING, {
 })
 
 //Server
-app.listen(3000, ()=>{
+app.listen(process.env.PORT, ()=>{
 
-    console.log('server is running http://localhost:3000');
+    console.log('Server is running http://localhost:5000');
 })
