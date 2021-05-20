@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "5f1686ffdfa624a0ccf981c8"
+  },
+  "name": "Ivan Ivanov",
+  "email": "ivan.ivanov@gmail.com",
+  "passwordHash": "123456", 
+  "phone": "0882883765",
+  "isAdmin": true,
+  "shippingAddress": "ul. Prohodna 74, apt.20, Sofia",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f1687e1be2e99a158c08504"
+  },
+  "name": "Marina Marinova",    
+  "email":"marina.marinova@gmail.com",
+  "passwordHash":"123456",
+  "phone":"0895864306",
+  "isAdmin":false,
+  "shippingAddress":"ul. Vitinq 23, apt. 11, Plovdiv",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f168810be2e99a158c08505"
+  },
+  "name": "Petur Petrov",    
+  "email":"petur.petrov@gmail.com",
+  "passwordHash":"123456",
+  "phone":"0883309301",
+  "isAdmin":false,
+  "street":"ul. Krasna 11, apt. 56, Sofia",
+  "__v": 0
+}]

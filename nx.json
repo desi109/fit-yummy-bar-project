@@ -1,0 +1,53 @@
+{
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "fit-yummy",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "fit-yummy-bar": {
+      "tags": []
+    },
+    "fit-yummy-bar-e2e": {
+      "tags": [],
+      "implicitDependencies": ["fit-yummy-bar"]
+    },
+    "ui": {
+      "tags": []
+    },
+    "products-e2e": {
+      "tags": [],
+      "implicitDependencies": []
+    },
+    "fit-yummy-admin": {
+      "tags": []
+    },
+    "fit-yummy-admin-e2e": {
+      "tags": [],
+      "implicitDependencies": ["fit-yummy-admin"]
+    },
+    "products": {
+      "tags": []
+    },
+    "users": {
+      "tags": []
+    },
+    "orders": {
+      "tags": []
+    }
+  }
+}
