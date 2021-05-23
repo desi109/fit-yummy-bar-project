@@ -23,13 +23,11 @@ export class CheckoutPageComponent implements OnInit {
   checkoutFormGroup: FormGroup;
   isSubmitted = false;
   orderItems: OrderItem[] = [];
-  userId = '609d65943373711346c5e950';
-  countries = [];
+  //userId = '609d65943373711346c5e950';
 
   ngOnInit(): void {
     this._initCheckoutForm();
     this._getCartItems();
-    this._getCountries();
   }
 
   private _initCheckoutForm() {
@@ -51,10 +49,6 @@ export class CheckoutPageComponent implements OnInit {
     });
   }
 
-  private _getCountries() {
-    this.countries = this.usersService.getCountries();
-  }
-
   backToCart() {
     this.router.navigate(['/cart']);
   }
@@ -70,7 +64,7 @@ export class CheckoutPageComponent implements OnInit {
       shippingAddress: this.checkoutForm.shippingAddress.value,
       phone: this.checkoutForm.phone.value,
       status: 0,
-      user: this.userId,
+      user: this.checkoutForm.name.value,
       dateOrdered: `${Date.now()}`
     };
 

@@ -10,13 +10,11 @@
       "$oid": "60aa4ada6f23fe647817c48e"
     }
   ],
-  "status": "0",
+  "status": 4,
   "shippingAddress": "ul. Vitinq 23, apt. 11, Plovdiv",
   "phone": "359895864306",
   "totalPrice": 12.98,
-  "user": {
-    "$oid": "5f1687e1be2e99a158c08504"
-  },
+  "user": "Petur Petrov",
   "dateOrdered": {
     "$date": "2021-05-23T12:30:18.361Z"
   },
@@ -36,15 +34,40 @@
       "$oid": "60aa4bc36f23fe647817c495"
     }
   ],
-  "status": "2",
+  "status": 3,
   "shippingAddress": "ul. Krasna 11, apt. 56, Sofia",
   "phone": "359883309301",
   "totalPrice": 34.95,
-  "user": {
-    "$oid": "5f168810be2e99a158c08505"
-  },
+  "user": "Marina Marinova",
   "dateOrdered": {
     "$date": "2021-05-23T12:34:11.294Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60aacbbd567f45ad9e4eee84"
+  },
+  "orderItems": [
+    {
+      "$oid": "60aacbbd567f45ad9e4eee80"
+    },
+    {
+      "$oid": "60aacbbd567f45ad9e4eee81"
+    },
+    {
+      "$oid": "60aacbbd567f45ad9e4eee82"
+    },
+    {
+      "$oid": "60aacbbd567f45ad9e4eee83"
+    }
+  ],
+  "status": 0,
+  "shippingAddress": " Obelq 2, bl. 234, vh. A\nSofia, Bulgaria",
+  "phone": "(358) 845-6773",
+  "totalPrice": 22.96,
+  "user": "Todor Todorov",
+  "dateOrdered": {
+    "$date": "2021-05-23T21:40:13.719Z"
   },
   "__v": 0
 }]

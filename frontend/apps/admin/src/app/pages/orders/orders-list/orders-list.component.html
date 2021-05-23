@@ -19,7 +19,7 @@
           </ng-template>
           <ng-template pTemplate="body" let-order>
             <tr>
-              <td>{{ order.user.name }}</td>
+              <td>{{ order.user }}</td>
               <td>{{ order.totalPrice }}</td>
               <td>{{ order.dateOrdered | date: 'short' }}</td>
               <td>

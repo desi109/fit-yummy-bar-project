@@ -7,7 +7,7 @@ const router = express.Router();
 // GET order of a user from exact date
 // http://localhost:3000/api/v1/orders
 router.get(`/`, async (req, res) =>{
-    const orderList = await Order.find().populate('user', 'name').sort({'dateOrdered': -1});
+    const orderList = await Order.find().populate('name').sort({'dateOrdered': -1});
 
     if(!orderList) {
         res.status(500).json({success: false})
@@ -20,7 +20,7 @@ router.get(`/`, async (req, res) =>{
 // http://localhost:3000/api/v1/orders/6055a6a8eafaa314670475cf
 router.get(`/:id`, async (req, res) =>{
     const order = await Order.findById(req.params.id)
-    .populate('user', 'name')
+    .populate('name')
     .populate({ 
         path: 'orderItems', populate: {
             path : 'product', populate: 'category'} 
