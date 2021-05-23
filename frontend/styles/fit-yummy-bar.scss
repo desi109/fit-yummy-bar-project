@@ -1,0 +1,36 @@
+// Base Config
+@import '~normalize.css/normalize.css';
+@import './base/colors.scss';
+@import './base/fonts.scss';
+@import './base/mixins.scss';
+
+//Libraries
+@import '~primeicons/primeicons.css';
+@import '~primeng/resources/themes/saga-orange/theme.css';
+@import '~primeng/resources/primeng.min.css';
+@import '~primeflex/primeflex.scss';
+@import '~animate.css/animate.css';
+
+@import './base/configuration.scss';
+
+//Shared
+@import './apps/fit-yummy-bar/shared/header.scss';
+@import './apps/fit-yummy-bar/shared/footer.scss';
+@import './apps/fit-yummy-bar/shared/nav.scss';
+
+//Pages
+@import './apps/fit-yummy-bar/pages/home-page.scss';
+@import './apps/fit-yummy-bar/pages/products-list-page.scss';
+
+//Libs
+@import './libs/products/products.scss';
+@import './libs/orders/orders.scss';
+@import './libs/users/users.scss';
+@import './libs/ui/ui.scss';
+
+.container {
+  width: 1200px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #FEAF54;
+}
