@@ -63,9 +63,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-The idea of this app is to save the user's business cards. When the user signs up, the system automatically generates a 4-digit code that is unique. If a user wants to give his business card to somebody, he just has to provide this code. The platform has a search system that searches other users by using this user code.  After the user's business card which is searched, is found, it can be added with just one click. The application has a user`s connections board, from where the user can see all his contacts. Every user profile can be edited and the new information for a user will be updated also for the people who have been saved his business card. 
 
-The app has a blue minimalistic design and it is easy to be used by everyone.
+The app has a yellow minimalistic design and it is easy to be used by everyone.
 
 ![home-page-bar]
 ![products-page-bar]
@@ -79,6 +78,7 @@ Credentials for login as administrator are:
 Email: ivan.ivanov@gmail.com
 Password: 123456
 ```
+![login-page-admin]
 ![dashboard-page-admin]
 ![products-page-admin]
 ![add-product-page-admin]
