@@ -1,0 +1,30 @@
+  
+  Fit Yummy Bar - Setup and Start
+ ---------------------------------
+
+Start Backend:
+--------------
+npm install
+killall -9 node
+npm start
+
+
+
+
+
+Start Frontend:
+----------------
+npm install
+
+
+   Fit Yummy BAR
+  ---------------
+sudo kill -9 $(lsof -t -i:4200)
+nx serve fit-yummy-bar
+
+
+   Admin Pannel
+  --------------
+sudo kill -9 $(lsof -t -i:4100)
+nx serve admin --port 4100
+

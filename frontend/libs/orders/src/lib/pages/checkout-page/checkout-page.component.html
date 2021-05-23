@@ -1,0 +1,59 @@
+<div class="checkout-page">
+  <div>
+    <p-button label="Back to cart" icon="pi pi-arrow-left" (onClick)="backToCart()"></p-button>
+  </div>
+  <div class="p-grid checkout-form">
+    <div class="p-col-8">
+      <form [formGroup]="checkoutFormGroup">
+        <div class="p-fluid p-formgrid p-grid">
+          <div class="p-field p-col-4">
+            <label for="name">Name</label>
+            <input formControlName="name" id="name" type="text" pInputText />
+            <small *ngIf="checkoutForm.name.invalid && isSubmitted" class="p-error"
+              >Name is required</small
+            >
+          </div>
+          <div class="p-field p-col-4">
+            <label for="email">Email</label>
+            <input formControlName="email" id="email" type="text" pInputText />
+            <small *ngIf="checkoutForm.email.invalid && isSubmitted" class="p-error"
+              ><span *ngIf="checkoutForm.email.errors.required">email is required</span>
+              <span *ngIf="checkoutForm.email.errors.email">email is invalid</span></small
+            >
+          </div>
+          <div class="p-field p-col-4">
+            <label for="color">Phone</label><br />
+            <p-inputMask
+              mask="(999) 999-9999"
+              formControlName="phone"
+              placeholder="(359) "
+            ></p-inputMask>
+            <small *ngIf="checkoutForm.phone.invalid && isSubmitted" class="p-error"
+              >phone is required</small
+            >
+          </div>
+        </div>
+        <div class="p-fluid p-formgrid p-grid">
+          <div class="p-field p-col-12">
+            <label for="shippingAddress">Shipping Address</label><br />
+            <textarea
+              pInputTextarea
+              formControlName="shippingAddress"
+              [rows]="7"
+              [cols]="30"
+            ></textarea>
+            <small *ngIf="checkoutForm.shippingAddress.invalid && isSubmitted" class="p-error"
+              >Shipping address is required</small
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="p-col-4">
+      <orders-order-summary></orders-order-summary>
+      <div class="checkout-button">
+        <p-button label="Place-Order" (onClick)="placeOrder()"></p-button>
+      </div>
+    </div>
+  </div>
+</div>

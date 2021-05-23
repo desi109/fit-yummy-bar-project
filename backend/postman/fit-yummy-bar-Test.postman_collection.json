@@ -1,0 +1,886 @@
+{
+	"info": {
+		"_postman_id": "56c48961-96cf-4373-8c31-3a5add98dabd",
+		"name": "fit-yummy-bar-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "http://localhost:3000/api/v1/products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/users        + Ivan (admin)  Token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDkzN2RjZjRiZDg2M2Y1M2ZiYTg4OGUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjAyNzkwMDksImV4cCI6MTYyMDM2NTQwOX0.zB3WGkm0QtL2Fg9FEPYW3OT6QCZ0r9p5VJL8iSeTetE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/orders  Marina (user) - orders   -----> use Ivan(admin) Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDkzN2RjZjRiZDg2M2Y1M2ZiYTg4OGUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjAyODQ1NDIsImV4cCI6MTYyMDM3MDk0Mn0.0QR62C4QTxD3oYAE2ZofpIEAvuzWyRqM1ndSIz_e62A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						},
+						"description": "Get all orders of Marina"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/orders/get/totalsales",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDkzN2RjZjRiZDg2M2Y1M2ZiYTg4OGUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjAyODQ1NDIsImV4cCI6MTYyMDM3MDk0Mn0.0QR62C4QTxD3oYAE2ZofpIEAvuzWyRqM1ndSIz_e62A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/orders/get/totalsales",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"get",
+								"totalsales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/orders/get/count",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDkzN2RjZjRiZDg2M2Y1M2ZiYTg4OGUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjAyODQ1NDIsImV4cCI6MTYyMDM3MDk0Mn0.0QR62C4QTxD3oYAE2ZofpIEAvuzWyRqM1ndSIz_e62A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/orders/get/count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"get",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/orders/get/userorders/60937e224bd863f53fba888f   Marina (user) --> get all orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDkzN2RjZjRiZDg2M2Y1M2ZiYTg4OGUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjAyODQ1NDIsImV4cCI6MTYyMDM3MDk0Mn0.0QR62C4QTxD3oYAE2ZofpIEAvuzWyRqM1ndSIz_e62A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/orders/get/userorders/60937e224bd863f53fba888f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"get",
+								"userorders",
+								"60937e224bd863f53fba888f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "http://localhost:3000/api/v1/products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"hair dresser\",\n    \"image\": \"some_url\",\n    \"countInStock\": 500\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/categories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"sandals\",\n    \"icon\": \"icon-sandals\",\n    \"color\": \"#0277\"\n}  ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Product 3 (trainers)\",\n    \"description\": \"Product 3 description.\",\n    \"richDescription\": \"Product 3 richDescription.\",\n    \"image\": \"roduct3/image.jpg\",\n    \"brand\": \"Product 3 Brand\",\n    \"price\": 30,\n    \"category\": \"60583441e1a3fe80e66fc176\",\n    \"countInStock\": 10,\n    \"rating\": 4,\n    \"numReviews\": 22,\n    \"isFeatured\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/users/registration   Ivan - admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ivan Ivanov\",\n    \"email\": \"ivan.ivanov@gmail.com\",\n    \"passwordHash\": \"123456\",\n    \"phone\": \"0882883765\",\n    \"isAdmin\": true,\n    \"street\": \"ul. Prohodna 74\",\n    \"apartament\": \"apt. 20\",\n    \"zip\": \"1000\",\n    \"city\": \"Sofia\",\n    \"country\": \"Bulgaria\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/users/registration   Marina - user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Marina Marinova\",    \n    \"email\":\"marina.marinova@gmail.com\",\n    \"passwordHash\":\"123456\",\n    \"phone\":\"0895864306\",\n    \"isAdmin\":false,\n    \"street\":\"ul. Vitinq 23\",\n    \"apartament\":\"apt. 11\",\n    \"zip\":\"4000\",\n    \"city\":\"Plovdiv\",\n    \"country\":\"Bulgaria\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/users/registration   Petur - user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Petur Petrov\",    \n    \"email\":\"petur.petrov@gmail.com\",\n    \"passwordHash\":\"123456\",\n    \"phone\":\"0883309301\",\n    \"isAdmin\":false,\n    \"street\":\"ul. Krasna 11\",\n    \"apartament\":\"apt. 56\",\n    \"zip\":\"1000\",\n    \"city\":\"Sofia\",\n    \"country\":\"Bulgaria\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/users/login   Ivan - admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ivan.ivanov@gmail.com\",\n    \"passwordHash\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/users/login   Marina - user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"marina.marinova@gmail.com\",\n    \"passwordHash\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/orders  Marina (user) - order  -----> use Ivan(admin) Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDkzN2RjZjRiZDg2M2Y1M2ZiYTg4OGUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjAyODQ1NDIsImV4cCI6MTYyMDM3MDk0Mn0.0QR62C4QTxD3oYAE2ZofpIEAvuzWyRqM1ndSIz_e62A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderItems\":[\n        {\n            \"quantity\":2,\n            \"product\":\"605855d09d38f1a5864b5353\"\n        },\n        {\n            \"quantity\":1,\n            \"product\":\"605855eb9d38f1a5864b5354\"\n        }\n    ],\n    \"shippingAddress1\":\"ul. Vitinq 23\",\n    \"shippingAddress2\":\"apt. 11\",\n    \"city\":\"Plovdiv\",\n    \"zip\":\"4000\",\n    \"country\":\"Bulgaria\",\n    \"phone\":\"0895864306\",\n    \"user\": \"60937e224bd863f53fba888f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/products   --> add new product with image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDkzN2RjZjRiZDg2M2Y1M2ZiYTg4OGUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjAyODQ1NDIsImV4cCI6MTYyMDM3MDk0Mn0.0QR62C4QTxD3oYAE2ZofpIEAvuzWyRqM1ndSIz_e62A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Product 5 (boots)",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Product 5 description.",
+									"type": "text"
+								},
+								{
+									"key": "richDescription",
+									"value": "Product 5 richDescription.",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/dess/Downloads/product-5-boots.jpg"
+								},
+								{
+									"key": "brand",
+									"value": "Product 5 Brand",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "6055a6a8eafaa314670475cf",
+									"type": "text"
+								},
+								{
+									"key": "countInStock",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "numReviews",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "isFeatured",
+									"value": "true",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "http://localhost:3000/api/v1/categories/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories/6055ab5b82183e1ff173ca9f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"6055ab5b82183e1ff173ca9f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/categories/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories/6055ab5b82183e1ff173ca9f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"6055ab5b82183e1ff173ca9f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "http://localhost:3000/api/v1/categories/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"boots\",\n    \"icon\": \"icon-boots\",\n    \"color\": \"#5551\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories/6055a6a8eafaa314670475cf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"6055a6a8eafaa314670475cf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/products/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"richDescription\": \"Product 2 richDescription\",\n    \"image\": \"product2/image.jpg\",\n    \"brand\": \"Product 2 Brand\",\n    \"price\": 70,\n    \"rating\": 4,\n    \"numReviews\": 22,\n    \"isFeatured\": true,\n    \"category\": \"6055a7cbeafaa314670475d0\",\n    \"_id\": \"60584072c462929bcdb84745\",\n    \"name\": \"Product 2 ankle boots\",\n    \"description\": \"Product 2 description\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/products/605840cec462929bcdb84746",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"605840cec462929bcdb84746"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/products/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Product 2 (ankle boots)\",\n    \"description\": \"Product 2 description.\",\n    \"richDescription\": \"Product 2 richDescription.\",\n    \"image\": \"roduct2/image.jpg\",\n    \"brand\": \"Product 2 Brand\",\n    \"price\": 70,\n    \"category\": \"6055a7cbeafaa314670475d0\",\n    \"countInStock\": 10,\n    \"rating\": 4,\n    \"numReviews\": 22,\n    \"isFeatured\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/products/605855eb9d38f1a5864b5354",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"605855eb9d38f1a5864b5354"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/products/gallery-images/6093b2c6b59ad435a61304df",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDkzN2RjZjRiZDg2M2Y1M2ZiYTg4OGUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MjAyODQ1NDIsImV4cCI6MTYyMDM3MDk0Mn0.0QR62C4QTxD3oYAE2ZofpIEAvuzWyRqM1ndSIz_e62A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Product 5 (boots)",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Product 5 description.",
+									"type": "text"
+								},
+								{
+									"key": "richDescription",
+									"value": "Product 5 richDescription.",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "Product 5 Brand",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "price",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "6055a6a8eafaa314670475cf",
+									"type": "text"
+								},
+								{
+									"key": "countInStock",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "numReviews",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "isFeatured",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/home/dess/Downloads/89855279_106117804344001_1626239686743687168_n.png",
+										"/home/dess/Downloads/christian-holzinger-kEXMAGTivXA-unsplash.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/products/gallery-images/6093b2c6b59ad435a61304df",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"gallery-images",
+								"6093b2c6b59ad435a61304df"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

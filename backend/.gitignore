@@ -1,35 +1,5 @@
-
-# Created by https://www.toptal.com/developers/gitignore/api/vscode,yarn,intellij,node,expressionengine,serverless,database
-# Edit at https://www.toptal.com/developers/gitignore?templates=vscode,yarn,intellij,node,expressionengine,serverless,database
-
-### Database ###
-*.accdb
-*.db
-*.dbf
-*.mdb
-*.pdb
-*.sqlite3
-
-### ExpressionEngine ###
-.DS_Store
-
-# Images
-images/avatars/
-images/captchas/
-images/smileys/
-images/member_photos/
-images/signature_attachments/
-images/pm_attachments/
-
-# For security do not publish the following files
-system/expressionengine/config/database.php
-system/expressionengine/config/config.php
-
-# Caches
-sized/
-thumbs/
-_thumbs/
-*/expressionengine/cache/*
+# Created by https://www.toptal.com/developers/gitignore/api/vscode,intellij,node
+# Edit at https://www.toptal.com/developers/gitignore?templates=vscode,intellij,node
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -260,10 +230,6 @@ dist/
 tmp/
 temp/
 
-### Serverless ###
-# Ignore build directory
-.serverless
-
 ### vscode ###
 .vscode/*
 !.vscode/settings.json
@@ -272,20 +238,29 @@ temp/
 !.vscode/extensions.json
 *.code-workspace
 
-### yarn ###
-# https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
+# dependencies
+node_modules
+node_modules/
+/.pnp
+.pnp.js
 
-.yarn/*
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
+# testing
+/coverage
 
-# if you are NOT using Zero-installs, then:
-# comment the following lines
-!.yarn/cache
+# production
+/frontend/build
 
-# and uncomment the following lines
-# .pnp.*
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# End of https://www.toptal.com/developers/gitignore/api/vscode,yarn,intellij,node,expressionengine,serverless,database
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vscode/settings.json
+
+# End of https://www.toptal.com/developers/gitignore/api/vscode,intellij,node
