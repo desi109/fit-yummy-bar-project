@@ -9,6 +9,9 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    
+    "build-prod-fit-yummy-bar": "nx build fit-yummy-bar --prod --output-path ../fit-yummy-bar --base-href /fit-yummy-bar/",
+    "build-prod-admin": "nx build admin --prod --output-path ../admin --base-href /admin/",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
     "affected:apps": "nx affected:apps",
