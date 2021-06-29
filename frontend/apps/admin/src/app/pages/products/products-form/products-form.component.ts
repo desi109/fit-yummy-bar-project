@@ -147,6 +147,7 @@ export class ProductsFormComponent implements OnInit, OnDestroy {
     Object.keys(this.productForm).map((key) => {
       productFormData.append(key, this.productForm[key].value);
     });
+    
     if (this.editmode) {
       this._updateProduct(productFormData);
     } else {

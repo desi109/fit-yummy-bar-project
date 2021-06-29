@@ -23,11 +23,11 @@
           </div>
           <div class="p-field p-col-4">
             <label for="color">Phone</label><br />
-            <p-inputMask
-              mask="(999) 999-9999"
+            <input
+              id="phone"
+              mask="(999) 999-999-999"
               formControlName="phone"
-              placeholder="(359) "
-            ></p-inputMask>
+            />
             <small *ngIf="checkoutForm.phone.invalid && isSubmitted" class="p-error"
               >phone is required</small
             >

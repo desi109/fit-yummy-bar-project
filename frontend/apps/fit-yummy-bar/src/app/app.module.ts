@@ -16,8 +16,10 @@ import { OrdersModule } from '@fit-yummy/orders';
 import { ToastModule } from 'primeng/toast';
 import { MessagesComponent } from './shared/messages/messages.component';
 import { MessageService } from 'primeng/api';
+import { UsersModule } from '@fit-yummy/users';
 
-const routes: Routes = [{ path: '', component: HomePageComponent }];
+const routes: Routes = [
+  { path: '', component: HomePageComponent }];
 
 @NgModule({
   declarations: [
@@ -30,14 +32,16 @@ const routes: Routes = [{ path: '', component: HomePageComponent }];
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
     HttpClientModule,
     ProductsModule,
     AccordionModule,
     BrowserAnimationsModule,
     UiModule,
     OrdersModule,
-    ToastModule
+    ToastModule,
+    UsersModule
+
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

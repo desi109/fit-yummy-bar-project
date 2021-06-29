@@ -45,13 +45,26 @@ router.post('/', async (req,res)=>{
     res.send(user);
 });
 
+
+// GET one user by email
+// http://localhost:3000/api/v1/users/getByEmail
+router.get('/getbyemail/:email', async (req,res)=>{
+    const user = await User.findOne({email: req.params.email});
+
+    if(!user) {
+        res.status(500).json({message: 'The user with the given ID was not found.'});
+    } 
+    res.status(200).send(user);
+});
+
+
 // POST (registration) of a new user 
 // http://localhost:3000/api/v1/users/registration
 router.post('/registration', async (req,res)=>{
     let user = new User({
         name: req.body.name,
         email: req.body.email,
-        passwordHash: bcrypt.hashSync(req.body.passwordHash, 10),
+        passwordHash: bcrypt.hashSync(req.body.password, 10),
         phone: req.body.phone,
         isAdmin: req.body.isAdmin,
         shippingAddress: req.body.shippingAddress
@@ -84,7 +97,7 @@ router.post('/login', async (req,res) => {
             {expiresIn : '1d'}
         );
        
-        res.status(200).send({user: user.email , token: token});
+        res.status(200).send({user: user, token: token});
     } else {
        res.status(400).send('Password is wrong!');
     }

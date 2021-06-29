@@ -16,7 +16,6 @@ export class UsersFormComponent implements OnInit {
   isSubmitted = false;
   editmode = false;
   currentUserId: string;
-  countries = [];
 
   constructor(
     private messageService: MessageService,
@@ -28,7 +27,6 @@ export class UsersFormComponent implements OnInit {
 
   ngOnInit(): void {
     this._initUserForm();
-    this._getCountries();
     this._checkEditMode();
   }
 
@@ -41,10 +39,6 @@ export class UsersFormComponent implements OnInit {
       isAdmin: [false],
       shippingAddress: ['']
     });
-  }
-
-  private _getCountries() {
-    this.countries = this.usersService.getCountries();
   }
 
   private _addUser(user: User) {

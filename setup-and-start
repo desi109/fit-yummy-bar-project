@@ -4,6 +4,7 @@
 
 Start Backend:
 --------------
+cd ~/fit-yummy-bar/backend/app-backend
 npm install
 killall -9 node
 npm start
@@ -14,6 +15,7 @@ npm start
 
 Start Frontend:
 ----------------
+cd ~/fit-yummy-bar/frontend
 npm install
 
 
