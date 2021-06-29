@@ -12,6 +12,10 @@
 
 ### ExpressionEngine ###
 .DS_Store
+/node_modules
+.env
+.prettierrc
+./idea
 
 # Images
 images/avatars/
