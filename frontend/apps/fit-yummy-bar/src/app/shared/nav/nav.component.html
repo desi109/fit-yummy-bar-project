@@ -1,5 +1,14 @@
 <ul class="nav">
   <li><a routerLink="/">Home</a></li>
-  <li><a routerLink="/products">Products</a></li>
-  <li><a routerLink="/contact">Contact</a></li>
+  <li><a routerLink="/products">Food</a></li>
+  <span class="spacer"></span>
+  <li *ngIf="!authService.isAuthenticated"><a routerLink="/login"><i class="pi pi-user p-text-secondary" style="color:white; font-size: 1.5rem"></i></a></li>
+  <li *ngIf="!authService.isAuthenticated"><a routerLink="/registration"><i class="pi pi-sign-in p-text-secondary" style="color:white; font-size: 1.5rem"></i></a></li>
+  <li *ngIf="authService.isAuthenticated">
+    <button class="button" (click)="onLogout()">
+    <a routerLink="/"><i class="pi pi-sign-out p-text-secondary" style="color:white; font-size: 1.5rem"></i></a>
+    </button></li>
+  <span class="spacer"></span>
+  <li><orders-cart-icon></orders-cart-icon></li>
 </ul>
+

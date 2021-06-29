@@ -110,7 +110,7 @@ To run this project you first need to install and set up:
   
 3. Start the back-end of the project:
    ```sh
-   cd fit-yummy-bar/backend
+   cd ~/fit-yummy-bar/backend/app-backend
    npm install
    killall -9 node
    npm start
@@ -125,7 +125,7 @@ To run this project you first need to install and set up:
 
 4. Start the front-end of the project:
    ```sh
-   cd fit-yummy-bar/frontend
+   cd ~/fit-yummy-bar/frontend
    npm install
    ```
 

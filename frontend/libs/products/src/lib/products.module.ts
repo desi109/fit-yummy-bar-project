@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OrdersModule } from '@fit-yummy/orders';
-import { ProductsSearchComponent } from './components/products-search/products-search.component';
 import { CategoriesBannerComponent } from './components/categories-banner/categories-banner.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductItemComponent } from './components/product-item/product-item.component';
@@ -42,7 +41,6 @@ const routes: Routes = [
     UiModule
   ],
   declarations: [
-    ProductsSearchComponent,
     CategoriesBannerComponent,
     ProductItemComponent,
     FeaturedProductsComponent,
@@ -50,7 +48,6 @@ const routes: Routes = [
     ProductPageComponent
   ],
   exports: [
-    ProductsSearchComponent,
     CategoriesBannerComponent,
     ProductItemComponent,
     FeaturedProductsComponent,

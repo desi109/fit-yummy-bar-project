@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UsersService } from '@fit-yummy/users';
+import { AuthService, UsersService } from '@fit-yummy/users';
 import { Cart } from '../../models/cart';
 import { Order } from '../../models/order';
 import { OrderItem } from '../../models/order-item';
@@ -16,6 +16,7 @@ export class CheckoutPageComponent implements OnInit {
   constructor(
     private router: Router,
     private usersService: UsersService,
+    private authService: AuthService,
     private formBuilder: FormBuilder,
     private cartService: CartService,
     private ordersService: OrdersService
@@ -31,6 +32,15 @@ export class CheckoutPageComponent implements OnInit {
   }
 
   private _initCheckoutForm() {
+    if (this.authService.isAuthenticated) {
+      this.checkoutFormGroup = this.formBuilder.group({
+        name: [this.authService.user.name, Validators.required],
+        email: [this.authService.user.email, [Validators.email, Validators.required]],
+        phone: [this.authService.user.phone, Validators.required],
+        shippingAddress: [this.authService.user.shippingAddress, Validators.required]
+      });
+        
+    } else {
     this.checkoutFormGroup = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', [Validators.email, Validators.required]],
@@ -38,6 +48,7 @@ export class CheckoutPageComponent implements OnInit {
       shippingAddress: ['', Validators.required]
     });
   }
+}
 
   private _getCartItems() {
     const cart: Cart = this.cartService.getCart();
@@ -58,15 +69,13 @@ export class CheckoutPageComponent implements OnInit {
     if (this.checkoutFormGroup.invalid) {
       return;
     }
-
-    const order: Order = {
+      const order: Order = {
       orderItems: this.orderItems,
       shippingAddress: this.checkoutForm.shippingAddress.value,
       phone: this.checkoutForm.phone.value,
       status: 0,
       user: this.checkoutForm.name.value,
-      dateOrdered: `${Date.now()}`
-    };
+      dateOrdered: `${Date.now()}`};    
 
     this.ordersService.createOrder(order).subscribe(
       () => {
