@@ -1,0 +1,15 @@
+---
+application:
+  name: "fit-yummy-bar"
+  project: "fit-yummy-bar"
+  organization: "QoveryCommunity"
+databases:
+- type: "MONGODB"
+  name: " fit-yummy-bar-prod"
+  version: "4.4"
+routers:
+- name: "main-fit-yummy-bar"
+  routes:
+  - application_name: "fit-yummy-bar"
+    paths:
+    - "/*"
