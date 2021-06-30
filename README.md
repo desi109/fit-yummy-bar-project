@@ -13,8 +13,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/desi109/fit-yummy-bar">
-    <img style="" src="screenshoots/logo.png" alt="Logo" width="40%" height="100%">
+  <a href="https://github.com/desi109/fit-yummy-bar-project/">
+    <img style="" src="logo.png" alt="Logo" width="40%" height="100%">
   </a>
 
 
@@ -62,28 +62,15 @@
 
 The app has a yellow minimalistic design and it is easy to be used by everyone.
 
-![home-page-bar]
-![products-page-bar]
-![product-page-bar]
-![order-page-1-bar]
-![order-page-2-bar]
-![order-page-3-bar]
+User App: https://desi109.github.io/fit-yummy-bar/
+
+Admin Panel: https://desi109.github.io/admin/
 
 Credentials for login as administrator are:
 ```
 Email: ivan.ivanov@gmail.com
 Password: 123456
 ```
-![login-page-admin]
-![dashboard-page-admin]
-![products-page-admin]
-![add-product-page-admin]
-![categories-page-admin]
-![orders-page-admin]
-![order-details-admin]
-![users-page-admin]
-
-
 
 
 <!-- GETTING STARTED -->
@@ -94,9 +81,12 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 To run this project you first need to install and set up:
 * MongoDB
-* [Node.js](https://nodejs.org/en/download/)
-* NPM 
 * Angular
+* Express.js 
+* [Node.js](https://nodejs.org/en/download/)
+* [Nx](https://nx.dev/) ( monorepo - one repository, multiple projects, shared libraries)
+
+And of course, every application has its own components or own modules.)
 
 
 ### Installation
@@ -197,18 +187,3 @@ Project Link: [https://github.com/desi109/fit-yummy-bar](https://github.com/desi
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/desislava-milusheva-200574151
 
-[home-page-bar]: screenshoots/fit-yummy-bar/home-page-bar.png
-[products-page-bar]: screenshoots/fit-yummy-bar/products-page-bar.png
-[product-page-bar]: screenshoots/fit-yummy-bar/product-page-bar.png
-[order-page-1-bar]: screenshoots/fit-yummy-bar/order-page-1-bar.png
-[order-page-2-bar]: screenshoots/fit-yummy-bar/order-page-2-bar.png
-[order-page-3-bar]: screenshoots/fit-yummy-bar/order-page-3-bar.png
-
-[login-page-admin]: screenshoots/admin/login-page-admin.png
-[dashboard-page-admin]: screenshoots/admin/dashboard-page-admin.png
-[products-page-admin]: screenshoots/admin/products-page-admin.png
-[add-product-page-admin]: screenshoots/admin/add-product-page-admin.png
-[categories-page-admin]: screenshoots/admin/categories-page-admin.png
-[orders-page-admin]: screenshoots/admin/orders-page-admin.png
-[order-details-admin]: screenshoots/admin/order-details-admin.png
-[users-page-admin]: screenshoots/admin/users-page-admin.png
